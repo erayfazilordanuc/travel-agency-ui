@@ -1,0 +1,134 @@
+/* --- Animasyonlar (Değişiklik Yok) --- */
+@keyframes pulsingGlowBlue {
+  0% {
+    box-shadow: 0 0 70px 80px rgba(29, 78, 216, 0.5);
+  }
+  25% {
+    box-shadow: 0 0 70px 55px rgba(29, 78, 216, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 90px 25px rgba(29, 78, 216, 0.8);
+  }
+  75% {
+    box-shadow: 0 0 70px 55px rgba(29, 78, 216, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 70px 80px rgba(29, 78, 216, 0.5);
+  }
+}
+@keyframes pulsingGlowBrown {
+  0% {
+    box-shadow: 0 0 70px 60px rgba(165, 125, 83, 0.4);
+  }
+  25% {
+    box-shadow: 0 0 70px 35px rgba(165, 125, 83, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 90px 20px rgba(165, 125, 83, 0.7);
+  }
+  75% {
+    box-shadow: 0 0 70px 35px rgba(165, 125, 83, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 70px 60px rgba(165, 125, 83, 0.4);
+  }
+}
+@keyframes pulsingGlowMultiColor {
+  0% {
+    box-shadow:
+      0 -30px 50px 5px rgba(199, 150, 155, 0.4),
+      -30px 0 60px 10px rgba(45, 74, 55, 0.5);
+  }
+  50% {
+    box-shadow:
+      0 -40px 60px 10px rgba(199, 150, 155, 0.6),
+      -40px 0 70px 15px rgba(6, 66, 27, 0.7);
+  }
+  100% {
+    box-shadow:
+      0 -30px 50px 5px rgba(199, 150, 155, 0.4),
+      -30px 0 60px 10px rgba(45, 74, 55, 0.5);
+  }
+}
+
+/* --- Genel Kapsayıcı Stilleri --- */
+.auroraContainer,
+.auroraTopRight,
+.auroraBottomRight {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* --- Varsayılan (Masaüstü) Stilleri --- */
+
+.auroraContainer::before {
+  content: "";
+  position: absolute;
+  width: clamp(300px, 30vw, 450px);
+  height: clamp(350px, 35vw, 500px);
+  border-radius: 10%;
+  left: -5vw;
+  bottom: -3vh;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, transparent 100%),
+    radial-gradient(circle, rgba(29, 78, 216, 0.4), transparent 80%),
+    url(/images/sea.jpg);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: 17% 10%;
+  background-blend-mode: overlay, soft-light, normal;
+  animation: pulsingGlowBlue 6s infinite ease-in-out;
+  transition:
+    opacity 0.5s ease-in-out,
+    filter 0.5s ease-in-out;
+}
+
+.auroraTopRight::before {
+  content: "";
+  position: absolute;
+  width: clamp(250px, 25vw, 400px);
+  height: clamp(250px, 25vw, 400px);
+  border-radius: 10%;
+  top: -5vh;
+  right: -2vw;
+  background-image: url(/images/mountain.jpg);
+  background-size: cover;
+  background-position: center;
+  animation: pulsingGlowBrown 6s infinite ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.auroraBottomRight::before {
+  content: "";
+  position: absolute;
+  width: clamp(350px, 40vw, 550px);
+  height: clamp(360px, 36vw, 450px);
+  border-radius: 10%;
+  bottom: -20vh;
+  right: -4vw;
+  background-image: url(/images/forest-road.jpg);
+  background-size: cover;
+  background-position: center;
+  animation: pulsingGlowMultiColor 6s infinite ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* --- RESPONSIVE KISIM (MOBİL VE KÜÇÜK EKRANLAR) --- */
+@media (max-width: 768px) {
+  /* Dağ ve Orman resimlerini gizleyerek kenara çekiyoruz */
+  .auroraTopRight::before,
+  .auroraBottomRight::before {
+    display: none;
+  }
+
+  /* Deniz resmini mobil için yeniden konumlandırıyoruz */
+  .auroraContainer::before {
+    width: clamp(280px, 70vw, 350px); /* Mobilde biraz daha dar */
+    height: clamp(300px, 80vw, 400px);
+    left: -25vw; /* Sol köşeye daha çok yaslıyoruz */
+    bottom: -10vh; /* Alttan biraz daha yukarıda */
+  }
+}

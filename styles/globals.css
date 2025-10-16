@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@config "../tailwind.config.js";
+
+/*
+  1. Temel renk değişkenlerini tanımla.
+  :root -> Varsayılan (Açık Tema)
+  html.dark -> Koyu Tema
+*/
+:root {
+  /* Açık tema için: Yarı şeffaf açık gri. Kirli bir görüntü yerine "buğulu" bir etki yaratır. */
+  --overlay-bg-color: rgba(255, 255, 255, 0.5); /* Tailwind'in gray-50 rengi */
+}
+
+html.dark {
+  /* Koyu tema için: Yarı şeffaf siyah. */
+  --overlay-bg-color: rgba(7, 10, 16, 0.85); /* Tailwind'in gray-900 rengi */
+}
+
+
+/* 2. pageOverlay sınıfında bu değişkeni kullan.
+*/
+.pageOverlay {
+  position: fixed;
+  inset: 0;
+  /* ARTIK RENK BURADAN, YANİ DEĞİŞKENDEN GELECEK */
+  background-color: var(--overlay-bg-color); 
+  
+  z-index: -5; /* Aurora efektlerinin önünde, ana içeriğin arkasında */
+  pointer-events: none; /* Tıklanamaz yapar */
+  transition: opacity 0.5s ease-in-out; /* Yumuşak geçiş efekti */
+  opacity: 0.1; 
+  
+}
+
+/*
+  3. Opaklık kontrolleri aynı kalıyor, sadece rengin kendisi temaya göre değişiyor.
+*/
+body.home-page-active .pageOverlay {
+  opacity: 0.3; /* Ana sayfa için opaklık */
+}
+
+body.other-page-active .pageOverlay {
+  opacity: 1; /* Diğer sayfalar için tam opaklık */
+}
