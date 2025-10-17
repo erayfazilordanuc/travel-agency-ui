@@ -1,8 +1,4 @@
-# Next.js & HeroUI Template
-
-This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
-
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
+# Travel Agency, Next.js & HeroUI Project
 
 ## Technologies Used
 
@@ -15,15 +11,6 @@ This is a template for creating applications using Next.js 14 (app directory) an
 - [next-themes](https://github.com/pacocoursey/next-themes)
 
 ## How to Use
-
-### Use the template with create-next-app
-
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
-```
-
 ### Install dependencies
 
 You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
@@ -38,16 +25,12 @@ npm install
 npm run dev
 ```
 
-### Setup pnpm (optional)
+## Photos
+<img width="1470" height="713" alt="Screenshot 2025-10-18 at 00 03 43" src="https://github.com/user-attachments/assets/0fa3c100-e058-4950-9daf-fff192e59c4f" />
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
+<img width="1470" height="712" alt="Screenshot 2025-10-18 at 00 03 59" src="https://github.com/user-attachments/assets/3060ebfd-fac2-4dd6-bf77-952d7d0a8afb" />
 
-```bash
-public-hoist-pattern[]=*@heroui/*
-```
+<img width="1469" height="653" alt="Screenshot 2025-10-18 at 00 04 18" src="https://github.com/user-attachments/assets/fa87d169-ad48-44d6-9774-a3866f34ae4e" />
 
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
+<img width="1289" height="695" alt="Screenshot 2025-10-18 at 00 05 13" src="https://github.com/user-attachments/assets/671e06fe-dba6-42ad-8484-541cda08ae8a" />
 
-## License
-
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
