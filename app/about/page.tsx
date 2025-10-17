@@ -7,6 +7,7 @@ import {
   ShieldCheckIcon,
   InfoIcon,
   PopularityIcon,
+  ShieldIcon,
 } from "@/components/icons";
 import React from "react";
 
@@ -18,19 +19,19 @@ type TeamMember = {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Elif Yılmaz",
+    name: "Max Verstappen",
     title: "Founder & CEO",
-    imageUrl: "/images/team/elif-yilmaz.jpg",
+    imageUrl: "/images/verstappen.png",
   },
   {
-    name: "Ahmet Kaya",
+    name: "Charles Leclerc",
     title: "Director of Operations",
-    imageUrl: "/images/team/ahmet-kaya.jpg",
+    imageUrl: "/images/leclerc.png",
   },
   {
-    name: "Zeynep Demir",
+    name: "Lando Norris",
     title: "Head Tour Guide",
-    imageUrl: "/images/team/zeynep-demir.jpg",
+    imageUrl: "/images/norris.png",
   },
 ];
 
@@ -61,11 +62,11 @@ export default function AboutUsPage() {
         </div>
         <div className="rounded-xl overflow-hidden shadow-xl">
           <Image
-            src="/images/about-inspiration.jpg"
+            src="/images/inspiration.png"
             alt="Inspirational travel visual"
             width={600}
             height={400}
-            className="object-cover w-full h-full aspect-video"
+            className="object-cover object-top w-full h-full aspect-video"
           />
         </div>
       </div>
@@ -100,14 +101,14 @@ export default function AboutUsPage() {
         <h2 className={title({ size: "md", class: "text-center mb-6" })}>
           The Values That Guide Us
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
           <ValueCard
             icon={<HeartIcon className="text-danger" />}
             title="Passion"
             description="Travel isn't just a job for us; it's a way of life. We pour our passion for exploring the world into every tour."
           />
           <ValueCard
-            icon={<ShieldCheckIcon className="text-success" />}
+            icon={<ShieldIcon className="text-success" />}
             title="Trust & Quality"
             description="From your safety to your comfort, we plan every detail to the highest standards and provide transparent service."
           />
@@ -126,7 +127,7 @@ export default function AboutUsPage() {
 
       <div className="max-w-6xl w-full px-6 mt-12 text-center">
         <h2 className={title({ size: "md" })}>Meet Our Team</h2>
-        <p className={subtitle({ class: "mt-2 mb-8" })}>
+        <p className={subtitle({ class: "mt-3 mb-5" })}>
           The wonderful people who will guide you on this journey.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">

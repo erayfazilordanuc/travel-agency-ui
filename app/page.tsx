@@ -21,7 +21,8 @@ export default function Home() {
       <div className="inline-block max-w-3xl text-center justify-center">
         <span className={title()}>Turn your holiday into an&nbsp;</span>
         <span className={title({ color: "blue" })}>unforgettable&nbsp;</span>
-        <span className={title()}>journey of discovery.</span>
+        <span className={title()}>journey of&nbsp;</span>
+        <span className={title({ color: "blue" })}> discovery.</span>
         <br />
         <div className={subtitle({ class: "mt-4" })}>
           {siteConfig.description}

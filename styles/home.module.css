@@ -36,17 +36,17 @@
 @keyframes pulsingGlowMultiColor {
   0% {
     box-shadow:
-      0 -30px 50px 5px rgba(199, 150, 155, 0.4),
+      0 -30px 50px 5px rgba(150, 165, 199, 0.4),
       -30px 0 60px 10px rgba(45, 74, 55, 0.5);
   }
   50% {
     box-shadow:
-      0 -40px 60px 10px rgba(199, 150, 155, 0.6),
+      0 -40px 60px 10px rgba(150, 184, 199, 0.6),
       -40px 0 70px 15px rgba(6, 66, 27, 0.7);
   }
   100% {
     box-shadow:
-      0 -30px 50px 5px rgba(199, 150, 155, 0.4),
+      0 -30px 50px 5px rgba(150, 185, 199, 0.4),
       -30px 0 60px 10px rgba(45, 74, 55, 0.5);
   }
 }
@@ -81,6 +81,7 @@
   background-position: 17% 10%;
   background-blend-mode: overlay, soft-light, normal;
   animation: pulsingGlowBlue 6s infinite ease-in-out;
+  opacity: 0.9;
   transition:
     opacity 0.5s ease-in-out,
     filter 0.5s ease-in-out;

@@ -55,8 +55,8 @@ export default function TourDetailPage({ params }: Props) {
               />
             )} */}
 
-            <div className="mt-1">
-              <h2 className={subtitle()}>Tour Description</h2>
+            <div className="mt-7">
+              {/* <h2 className={subtitle()}>Tour Description</h2> */}
               <p className="mt-4 text-lg text-default-700 leading-relaxed">
                 {tour.longDescription ||
                   "Bu tur için detaylı bir açıklama henüz eklenmemiş..."}
