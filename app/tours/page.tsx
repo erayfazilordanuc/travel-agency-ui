@@ -29,11 +29,7 @@ export default function ToursPage() {
 
       <div className="gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl w-full px-12 items-center justify-center">
         {toursData.map((tour) => (
-          <Link
-            href={`/tours/${tour.slug}`} // 'slug' kullandığınızı varsayarak
-            key={tour.id}
-            className="w-full"
-          >
+          <Link href={`/tours/${tour.slug}`} key={tour.id} className="w-full">
             <Card
               shadow="md"
               key={tour.id}
