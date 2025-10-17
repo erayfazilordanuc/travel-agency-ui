@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -28,27 +30,51 @@ import {
   LinkedinIcon,
   InfoIcon,
 } from "@/components/icons";
+import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 export const Navbar = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
+
+  const pathname = usePathname();
+
+  const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (searchQuery.trim() !== "") {
+      router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
+    }
+  };
+
+  useEffect(() => {
+    if (pathname !== "/search") {
+      setSearchQuery("");
+    }
+  }, [pathname]);
+
   const searchInput = (
-    <Input
-      aria-label="Search"
-      classNames={{
-        inputWrapper: "bg-default-100",
-        input: "text-sm",
-      }}
-      endContent={
-        <Kbd className="hidden lg:inline-block" keys={["command"]}>
-          K
-        </Kbd>
-      }
-      labelPlacement="outside"
-      placeholder="Search..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-      }
-      type="search"
-    />
+    <form onSubmit={handleSearchSubmit}>
+      <Input
+        aria-label="Search"
+        classNames={{
+          inputWrapper: "bg-default-100",
+          input: "text-sm",
+        }}
+        endContent={
+          <Kbd className="hidden lg:inline-block" keys={["command"]}>
+            K
+          </Kbd>
+        }
+        labelPlacement="outside"
+        placeholder="Search Tours..."
+        startContent={
+          <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
+        }
+        type="search"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
+    </form>
   );
 
   return (
@@ -100,7 +126,6 @@ export const Navbar = () => {
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
         <NavbarItem className="hidden md:flex">
           {/* <Button
-            // isExternal
             as={Link}
             className="text-sm font-normal text-default-600 bg-default-100"
             href="/about"

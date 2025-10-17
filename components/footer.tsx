@@ -5,8 +5,8 @@ import { GithubIcon, LinkedinIcon } from "@/components/icons"; // Github ikonu z
 
 export const Footer = () => {
   return (
-    <footer className="w-full flex flex-col items-center py-2 px-6 mt-auto border-t border-divider">
-      <div className="w-full max-w-5xl flex flex-col sm:flex-row justify-between items-center gap-6 text-center sm:text-left">
+    <footer className="w-full flex flex-col items-center py-2 px-6 mt-auto border-t border-divider bg-background/50">
+      <div className="w-full max-w-6xl flex flex-col sm:flex-row justify-between items-center gap-6 text-center sm:text-left">
         {/* Sol Taraf: Marka ve Telif Hakkı */}
         <div className="flex flex-row items-center justify-center sm:justify-start gap-2">
           <NextLink href="/" className="font-bold text-sm">

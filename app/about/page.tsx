@@ -36,7 +36,7 @@ const teamMembers: TeamMember[] = [
 
 export default function AboutUsPage() {
   return (
-    <section className="flex flex-col items-center justify-center gap-8 py-8 md:py-12">
+    <section className="flex flex-col items-center justify-center gap-8">
       <div className="inline-block max-w-4xl text-center justify-center">
         <h1 className={title()}>Our Story</h1>
         <h2 className={subtitle({ class: "mt-4" })}>
@@ -44,7 +44,7 @@ export default function AboutUsPage() {
         </h2>
       </div>
 
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-6">
+      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-6">
         <div className="flex flex-col gap-4 text-lg text-default-700">
           <p>
             GlobeTrotters is more than just a travel agency; for us, it's a
@@ -70,7 +70,7 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 px-6 mt-8">
+      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 px-6 mt-8">
         <div className="bg-default-100 p-6 rounded-lg shadow-sm">
           <div className="flex items-center gap-3 mb-3">
             <TargetIcon className="text-primary" size={24} />
@@ -96,7 +96,7 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl w-full px-6 mt-8">
+      <div className="max-w-6xl w-full px-6 mt-8">
         <h2 className={title({ size: "md", class: "text-center mb-6" })}>
           The Values That Guide Us
         </h2>
@@ -124,7 +124,7 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl w-full px-6 mt-12 text-center">
+      <div className="max-w-6xl w-full px-6 mt-12 text-center">
         <h2 className={title({ size: "md" })}>Meet Our Team</h2>
         <p className={subtitle({ class: "mt-2 mb-8" })}>
           The wonderful people who will guide you on this journey.
