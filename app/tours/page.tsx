@@ -34,7 +34,7 @@ export default function ToursPage() {
               shadow="md"
               key={tour.id}
               isPressable
-              className="hover:brightness-110 hover:scale-103 delay-100 duration-300"
+              className="hover:brightness-110 hover:scale-103 delay-150 duration-300"
             >
               <CardBody className="overflow-visible p-0">
                 <Image

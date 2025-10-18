@@ -125,15 +125,15 @@ export const Navbar = () => {
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
         <NavbarItem className="hidden md:flex">
-          {/* <Button
+          <Button
             as={Link}
             className="text-sm font-normal text-default-600 bg-default-100"
             href="/about"
-            startContent={<InfoIcon className="text-danger" />}
+            // startContent={<InfoIcon className="text-danger" />}
             variant="flat"
           >
-            Top 10
-          </Button> */}
+            Sign In
+          </Button>
         </NavbarItem>
       </NavbarContent>
 
